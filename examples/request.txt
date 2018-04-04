@@ -1,0 +1,36 @@
+{
+	"officeHours": {
+		"start": "0900",
+		"end": "1730"
+	},
+	"bookings": [{
+		"requestTime": "2011-03-17 10:17:06",
+		"employeeId": "EMP001",
+		"meetingStart": "2011-03-21 09:00",
+		"durationHours": 2
+	},
+	{
+		"requestTime": "2011-03-16 12:34:56",
+		"employeeId": "EMP002",
+		"meetingStart": "2011-03-21 09:00",
+		"durationHours": 2
+	},
+	{
+		"requestTime": "2011-03-16 09:28:23",
+		"employeeId": "EMP003",
+		"meetingStart": "2011-03-22 14:00",
+		"durationHours": 2
+	},
+	{
+		"requestTime": "2011-03-17 11:23:45",
+		"employeeId": "EMP004",
+		"meetingStart": "2011-03-22 16:00",
+		"durationHours": 1
+	},
+	{
+		"requestTime": "2011-03-15 17:29:12",
+		"employeeId": "EMP005",
+		"meetingStart": "2011-03-21 16:00",
+		"durationHours": 3
+	}]
+}
