@@ -3,19 +3,30 @@ package com.group.booking.web.data.in;
 import java.util.List;
 
 public class BookingRequest {
-    private final OfficeHours officeHours;
-    private final List<BookingEntry> bookings;
+    private OfficeHoursRequest officeHours;
+    private List<BookingEntry> bookings;
 
-    public BookingRequest(OfficeHours officeHours, List<BookingEntry> bookings) {
+    public BookingRequest(OfficeHoursRequest officeHours, List<BookingEntry> bookings) {
         this.officeHours = officeHours;
         this.bookings = bookings;
     }
 
-    public OfficeHours getOfficeHours() {
+    public BookingRequest() {
+    }
+
+    public OfficeHoursRequest getOfficeHours() {
         return officeHours;
     }
 
     public List<BookingEntry> getBookings() {
         return bookings;
+    }
+
+    public void setOfficeHours(OfficeHoursRequest officeHours) {
+        this.officeHours = officeHours;
+    }
+
+    public void setBookings(List<BookingEntry> bookings) {
+        this.bookings = bookings;
     }
 }
