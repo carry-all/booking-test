@@ -7,7 +7,10 @@ import java.util.List;
 
 public interface MeetingsStorage {
     boolean isMeetingAllowed(Meeting meeting);
+
     void addMeeting(Meeting meeting);
+
     List<Meeting> getAllMeetings();
+
     List<Meeting> getMeetingsByDate(LocalDate date);
 }

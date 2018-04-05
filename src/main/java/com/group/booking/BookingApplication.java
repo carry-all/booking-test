@@ -7,17 +7,17 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class BookingApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BookingApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BookingApplication.class, args);
+    }
 
-	@Bean
-	public InMemoryOfficeHoursStorage inMemoryOfficeHoursStorage() {
-		return new InMemoryOfficeHoursStorage();
-	}
+    @Bean
+    public InMemoryOfficeHoursStorage inMemoryOfficeHoursStorage() {
+        return new InMemoryOfficeHoursStorage();
+    }
 
-	@Bean
-	public InMemoryMeetingsStorage inMemoryMeetingsStorage() {
-		return new InMemoryMeetingsStorage();
-	}
+    @Bean
+    public InMemoryMeetingsStorage inMemoryMeetingsStorage() {
+        return new InMemoryMeetingsStorage();
+    }
 }

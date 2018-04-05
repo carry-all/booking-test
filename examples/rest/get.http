@@ -1,0 +1,6 @@
+GET http://localhost:8080/bookings?date=2011-03-21
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+###

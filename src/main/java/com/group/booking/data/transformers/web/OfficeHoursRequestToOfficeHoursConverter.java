@@ -11,16 +11,6 @@ import java.time.Duration;
 public class OfficeHoursRequestToOfficeHoursConverter implements Converter<OfficeHoursRequest, OfficeHours> {
     private static final int HOUR_CLOCK_FORMAT_LENGTH = 4;
 
-    @Override
-    public OfficeHours convert(OfficeHoursRequest source) {
-        final Duration start = durationFromString(source.getStart());
-        final Duration end = durationFromString(source.getEnd());
-
-        complainIfStartNotBeforeEnd(start, end);
-
-        return new OfficeHours(start, end);
-    }
-
     private static Duration durationFromString(String timeString) {
         if (timeString == null || timeString.length() != HOUR_CLOCK_FORMAT_LENGTH) {
             throw new IllegalArgumentException(String.format("Only %s digit 24 hour clock format is accepted. Got '%s'", HOUR_CLOCK_FORMAT_LENGTH, timeString));
@@ -49,5 +39,15 @@ public class OfficeHoursRequestToOfficeHoursConverter implements Converter<Offic
         if (start.compareTo(end) > 0) {
             throw new IllegalArgumentException("Start must be before end");
         }
+    }
+
+    @Override
+    public OfficeHours convert(OfficeHoursRequest source) {
+        final Duration start = durationFromString(source.getStart());
+        final Duration end = durationFromString(source.getEnd());
+
+        complainIfStartNotBeforeEnd(start, end);
+
+        return new OfficeHours(start, end);
     }
 }

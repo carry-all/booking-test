@@ -14,17 +14,17 @@ public class OfficeHoursToOfficeRequestHoursConverter implements Converter<Offic
     private static final String STRING_TIME_FORMAT = "%02d%02d";
     private static final int MINUTES_IN_HOUR = 60;
 
+    private static String formatDurationAsString(Duration time) {
+        final long hours = time.toHours();
+        final long minutes = time.toMinutes() - hours * MINUTES_IN_HOUR;
+        return String.format(STRING_TIME_FORMAT, hours, minutes);
+    }
+
     @Override
     public OfficeHoursRequest convert(OfficeHours source) {
         final String formattedStart = formatDurationAsString(source.getStart());
         final String formattedEnd = formatDurationAsString(source.getEnd());
 
         return new OfficeHoursRequest(formattedStart, formattedEnd);
-    }
-
-    private static String formatDurationAsString(Duration time) {
-        final long hours = time.toHours();
-        final long minutes = time.toMinutes() - hours * MINUTES_IN_HOUR;
-        return String.format(STRING_TIME_FORMAT, hours, minutes);
     }
 }

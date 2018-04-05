@@ -20,28 +20,28 @@ public class BookingEntry {
         return requestTime;
     }
 
-    public String getEmployeeId() {
-        return employeeId;
-    }
-
-    public String getMeetingStart() {
-        return meetingStart;
-    }
-
-    public int getDurationHours() {
-        return durationHours;
-    }
-
     public void setRequestTime(String requestTime) {
         this.requestTime = requestTime;
+    }
+
+    public String getEmployeeId() {
+        return employeeId;
     }
 
     public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
 
+    public String getMeetingStart() {
+        return meetingStart;
+    }
+
     public void setMeetingStart(String meetingStart) {
         this.meetingStart = meetingStart;
+    }
+
+    public int getDurationHours() {
+        return durationHours;
     }
 
     public void setDurationHours(int durationHours) {

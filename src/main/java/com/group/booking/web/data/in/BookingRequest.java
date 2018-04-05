@@ -18,12 +18,12 @@ public class BookingRequest {
         return officeHours;
     }
 
-    public List<BookingEntry> getBookings() {
-        return bookings;
-    }
-
     public void setOfficeHours(OfficeHoursRequest officeHours) {
         this.officeHours = officeHours;
+    }
+
+    public List<BookingEntry> getBookings() {
+        return bookings;
     }
 
     public void setBookings(List<BookingEntry> bookings) {
