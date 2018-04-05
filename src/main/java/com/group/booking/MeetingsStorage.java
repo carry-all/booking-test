@@ -3,7 +3,6 @@ package com.group.booking;
 import com.group.booking.data.Meeting;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 public interface MeetingsStorage {

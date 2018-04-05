@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.time.Duration;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class OfficeHoursToOfficeRequestHoursConverterTest {
     OfficeHoursToOfficeRequestHoursConverter converter = new OfficeHoursToOfficeRequestHoursConverter();

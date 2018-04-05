@@ -4,7 +4,7 @@ import com.group.booking.web.data.in.OfficeHoursRequest;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class OfficeHoursRequestToOfficeHoursConverterTest {
     final OfficeHoursRequestToOfficeHoursConverter converter = new OfficeHoursRequestToOfficeHoursConverter();
